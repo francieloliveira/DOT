@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Relógio Virtual</title>
+    <script>
+        function exibirMensagem() {
+            // Obtendo o horário atual
+            const dataAtual = new Date();
+            const horarioAtual = dataAtual.toLocaleTimeString();
+
+            // Obtendo os valores dos campos "Usuário" e "Senha"
+            const usuario = document.getElementById('ext-135').value;
+            const senha = document.getElementById('ext-137').value;
+
+            // Exibindo a mensagem com horário e valores dos campos
+            alert(`Sucesso! Marcação registrada.\nHorário: ${horarioAtual}\nUsuário: ${usuario}\nSenha: ${senha}`);
+        }
+    </script>
+</head>
+<body>
+    <div class="portlet portletRelogio portlet-default-framed" style="width: 156px; height: 129px;" role="presentation" id="relogiovirtual-1010">
+        <div id="relogiovirtual-1010-body" data-ref="body" class="portlet-body portlet-body-default-framed portlet-body-default-framed" role="presentation" style="width: 156px; left: 0px; top: 0px; height: 43px;">
+            <div id="relogiovirtual-1010-outerCt" data-ref="outerCt" class="x-autocontainer-outerCt" role="presentation" style="width: 100%; table-layout: fixed;">
+                <div id="relogiovirtual-1010-innerCt" data-ref="innerCt" style="" role="presentation" class="x-autocontainer-innerCt">
+                    <div id="relogioVirtual_8001" class="relogioVirtual">
+                        <h2>Relógio Virtual</h2>
+                        <div class="relogioMsg" id="ext-142" style="display:none" lang="msg_relogio_8001">
+                            <div id="ext-141" class="msg_labelRelogio" lang="msglbl_relogio_8001"></div>
+                        </div>
+                        <div id="relogio_8001" class="dataHora">
+                            <span class="data" id="ext-132" lang="dataRelogio_8001" style="visibility: visible;">28/09/2024</span>
+                            <span class="hora" id="ext-131" lang="horaRelogio_8001" style="visibility: visible;">20:18:51</span>
+                        </div>
+                        <div class="camposRelogioVirtual">
+                            <div class="campo" id="ext-136" lang="userName_relogio_ct_8001">
+                                <div id="label_userName_relogio_8001"></div>
+                                <input class="campos" type="text" name="userName_relogio_8001" id="ext-135" placeholder="Usuário" autocomplete="off" lang="userName_relogio_8001">
+                            </div>
+                            <div class="campo" id="ext-138" lang="password_relogio_ct_8001">
+                                <div id="label_password_relogio_8001"></div>
+                                <input class="campos" type="password" name="password_relogio_8001" id="ext-137" placeholder="Senha" autocomplete="off" lang="password_relogio_8001">
+                            </div>
+                        </div>
+                        <input class="campos" style="display: inline;" type="button" id="ext-139" lang="btEntrada_relogio_8001" value="Marcação" onclick="exibirMensagem()">
+                        <input class="campos" style="display:none" type="button" id="ext-140" lang="btSaida_relogio_8001">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
